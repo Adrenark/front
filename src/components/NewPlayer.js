@@ -19,45 +19,71 @@ const AddPlayer = () => {
         setPosition('');
     };
 
+    const renderPlayers = players.map((player, index) => (
+        <ul key={index} className="list-group-item">
+            <li>
+            Imię: <strong>{player.firstName}</strong>
+            </li>
+            <li>
+            Nazwisko: <strong>{player.lastName}</strong>
+                </li>
+                <li>
+                Pozycja: {player.position}
+                </li>
+             
+        </ul>
+    ));
+
     return (
-        <div>
-            <h2>Dodaj Zawodnika</h2>
+        
+        <div className="mx-5">
+        <div className="container ">
+            <div className="card mt-4">
+            <h2 className=" mx-5 mt-3">Dodaj Zawodnika</h2>
             <form onSubmit={handleAddPlayer}>
-                <div>
-                    <label>Imię:</label>
+                <div className=" mx-5 mb-3">
+                    <label className="form-label">Imię:</label>
                     <input
                         type="text"
+                        className="form-control"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                     />
                 </div>
-                <div>
-                    <label>Nazwisko:</label>
+                <div className="mx-5  mb-3">
+                    <label className="form-label">Nazwisko:</label>
                     <input
                         type="text"
+                        className="form-control"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
-                <div>
-                    <label>Pozycja:</label>
+                <div className="mx-5  mb-3">
+                    <label className="form-label">Pozycja:</label>
                     <input
                         type="text"
+                        className="form-control"
                         value={position}
                         onChange={(e) => setPosition(e.target.value)}
                     />
                 </div>
-                <button type="submit">Dodaj Zawodnika</button>
+                <button type="submit" className="mx-5 btn btn-primary">Dodaj Zawodnika</button>
             </form>
-            <h3>Lista Zawodników</h3>
-            <ul>
-                {players.map((player, index) => (
-                    <li key={index}>
-                        {player.firstName} {player.lastName} - {player.position}
-                    </li>
-                ))}
-            </ul>
+            <div className="card mx-5 mt-4">
+                <div className="card-body tytul">
+                    Lista nowych zawodników
+                </div>
+                <div className="col mt-4 mx-5 d-flex">
+                    <ul className="list-group">
+                        {renderPlayers}
+                    </ul>
+                </div>
+            </div>
+            </div>
         </div>
+</div>
+        
     );
 };
 

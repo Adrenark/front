@@ -30,20 +30,20 @@ const Players = (props) => {
         })
 
     return (
-        <div class="mx-5" >
+        <div className="mx-5" >
             <div className="container">
             <div className="card mt-4">
             <div className="card-body tytul">
               Lista zawodników
             </div>
             <div>
-            <a href="./NewPlayer" class="btn btn-primary">Dodaj zawodnika</a>
+            <a href="./NewPlayer" class="btn btn-primary mx-5 mb-3">Dodaj zawodnika</a>
             </div>
           </div>
           <div className="container">
             <div class="col mt-4 d-flex justify-content-center" >
-                <ul class="list-group">
-                <li class="list-group-item">{renderPlayers}</li>
+                <ul className="list-group">
+                <li className="list-group-item">{renderPlayers}</li>
                 </ul>
             </div>
             </div>
