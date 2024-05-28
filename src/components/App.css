@@ -1,0 +1,29 @@
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  max-height: 500px;
+  width: auto;
+  object-fit: cover; /* opcjonalnie, aby lepiej dostosować obraz do kontenera */
+}
+
+.title {
+  font-size: 40px;
+}
+.tytul {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+}
+.green-background {
+  background-color: green;
+}
+.body-bg {
+  background-color: lightgrey;
+}
